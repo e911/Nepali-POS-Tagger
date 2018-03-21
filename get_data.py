@@ -3,7 +3,7 @@
 """
 Nepali corpora parser
 
-@author: sandesh
+@author: pujan
 """
 
 import xml.etree.ElementTree as ET
@@ -210,62 +210,6 @@ class NepaliCorpus:
         else:
             return self.possible_tags_dict[word]
 
-    # def test_accuracy(self, test_result):
-    #     correct = 0
-    #     n = 0
-    #     num_senten = 0
-    #     senten_correct = 0
-    #     tag_word_in_senten_correct = 0
-    #     word_in_senten = 0
-    #
-    #     fkey = open(TEST_DIR + '/' + FILE_TEST_TAG_ORIGIN, 'r')
-    #     for line in open(TEST_DIR + '/' + test_result, 'r'):
-    #         word_in_senten += 1
-    #         n += 1
-    #         if line == fkey.readline():
-    #             tag_word_in_senten_correct += 1
-    #             correct += 1
-    #         if 'STOP' in line:
-    #             num_senten += 1
-    #             if tag_word_in_senten_correct == word_in_senten:
-    #                 senten_correct += 1
-    #             word_in_senten = 0
-    #             tag_word_in_senten_correct = 0
-    #
-    #     fkey.close()
-    #     print('Number of words in dictionary: ', len(self.word_dict))
-    #     print('Number of tags in dictionary: ', len(self.distinct_tags))
-    #     print('----------TEST-----------')
-    #     print('Number of testing sentences: ', num_senten)
-    #     print('Number of correct sentences: ', senten_correct)
-    #     print('==> Sentences tag accuracy: ', float(senten_correct) / num_senten)
-    #     print('Number of word to test: ', correct)
-    #     print('Number of correct word: ', n)
-    #     print('==> All tag accuracy: ', float(correct) / n)
-    #
-    # def test_tag_sequence(self, testFileName, outFileName):
-    #     start_time = time.time()
-    #
-    #     sentence = []
-    #     fout = open(TEST_DIR + '/' + outFileName, 'w')
-    #
-    #     for line in open(TEST_DIR + '/' + testFileName, 'r'):
-    #         line = line.strip()
-    #         if line == 'STOP':
-    #             if sentence:
-    #                 sentence.append(line)
-    #                 print(sentence)
-    #                 path = self.get_tag_sequence(sentence)
-    #                 print(path)
-    #                 for i in range(len(sentence)):
-    #                     fout.write(sentence[i] + '\t' + path[i + 1] + '\n')
-    #                 sentence = []
-    #         else:
-    #             sentence.append(line)
-    #
-    #     finish_time = time.time()
-    #     fout.close()
-    #     print('time to execute test_tag_sequence method:', finish_time - start_time)
     def testHMM(self, FILEPATH):
         actual_count = 0
         successful_count = 0
