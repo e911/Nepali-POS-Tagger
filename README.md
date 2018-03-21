@@ -34,6 +34,7 @@ python3 test.py
 
 ## Training the tagger
 pip install -r requirements.txt
+
 python3 train_tagger.py
 (This is still on todo list . It is for training the dataset using the given HMM algorithn(tnt_tagger) defined in nltk package)
 
