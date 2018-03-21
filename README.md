@@ -28,13 +28,13 @@ Run in command line:
 (The dictionary folder will be created automatically)
 (If you have a new dataset, delete the previously created dictionary/ folder)
 
-##Testing the tagger
-  python3 test.py
+## Testing the tagger
+python3 test.py
 (You can chose a specific tagged file form the dataset to test)
 
-##Training the tagger
-  pip install -r requirements.txt
-  python3 train_tagger.py
+## Training the tagger
+pip install -r requirements.txt
+python3 train_tagger.py
 (This is still on todo list . It is for training the dataset using the given HMM algorithn(tnt_tagger) defined in nltk package)
 
 
